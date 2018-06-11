@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="ctfapp">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <title>Awesome website</title>
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 
 </head>
-<body class="container-fluid">
+<body class="container-fluid" ng-controller="DashboardCtrl as dashboardCtrl">
 
 <section>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -24,17 +24,17 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
+                    <a class="nav-link" href="#">Stuff</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Action</a>
-                        <a class="dropdown-item" href="#">Another action</a>
+                        <a class="dropdown-item" href="#">Benutzer</a>
+                        <a class="dropdown-item" href="#">Login</a>
                         <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#">Something else here</a>
+                        <a class="dropdown-item" href="#">Flag</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -50,19 +50,26 @@
 </section>
 
 <section class="container">
-    <br>
-    <div class="alert alert-dark">
-        <p>Nothing here {{'yet' + '!'}}</p>
+    <div>
+        <ng-view></ng-view>
     </div>
 </section>
 
 
-<script src="js/jquery-3.3.1.slim.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
+<script src="../js/jquery-3.3.1.slim.min.js"></script>
+<script src="../js/popper.min.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/angular.min.js"></script>
+<script src="../js/angular-route.min.js"></script>
 
-<script src="app/app.js"></script>
-<script src="app/controller/DashboardController.js"></script>
+<script src="app.js"></script>
+<script src="config.js"></script>
+<script src="controllers/DashboardController.js"></script>
+<script src="controllers/LoginController.js"></script>
+
+<script src="services/UserService.js"></script>
+<script src="services/LoginService.js"></script>
+<script src="services/LegacyService.js"></script>
+
 </body>
 </html>

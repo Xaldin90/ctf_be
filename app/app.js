@@ -1,6 +1,5 @@
-var app = angular.module('app', [
-    'ngRoute',
-    'ngAnimate',
-    'ngResource',
-    'ngSanitize'
+'use strict';
+
+var app = angular.module('ctfapp', [
+    'ngRoute'
 ]);
