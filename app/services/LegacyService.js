@@ -4,9 +4,14 @@ app.factory('LegacyService', function($http, configuration) {
     return {
         getFlag: function(authToken) {
             var config = {
-                header: 'Authorization ' + authToken
+                'Authorization': + authToken
             };
-            return $http.get(configuration.api.fullUrl + 'flag/', config);
+
+            return $http({
+                method: 'GET',
+                url: configuration.api.fullUrl + 'flag/',
+                headers: config
+            });
         }
     }
 });

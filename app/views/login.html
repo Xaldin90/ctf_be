@@ -1,3 +1,21 @@
-<div ng-controller="Login">
+<div ng-controller="LoginCtrl as loginCtrl">
+
+    <h1>Login</h1>
+
+    <br/>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="login-addon"><i class="fas fa-user"></i></span>
+        </div>
+        <input type="text" class="form-control" name="login" ng-model="user.login" placeholder="Login" aria-label="Login" aria-describedby="login-addon">
+    </div>
+    <div class="input-group mb-3">
+        <div class="input-group-prepend">
+            <span class="input-group-text" id="password-addon"><i class="fas fa-lock"></i></span>
+        </div>
+        <input type="password" class="form-control" name="password" ng-model="user.password" placeholder="Passwort" aria-label="Passwort" aria-describedby="password-addon">
+    </div>
+
+    <button class="btn btn-info float-right" ng-click="submitLogin()">Einloggen</button>
 
 </div>

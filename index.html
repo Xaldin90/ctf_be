@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--<base href="/ctf_mock_be/">-->
 
     <title>Awesome website</title>
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/fa-svg-with-js.css">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
 
 </head>
 <body class="container-fluid" ng-controller="DashboardCtrl as dashboardCtrl">
@@ -27,12 +30,12 @@
                     <a class="nav-link" href="#">Stuff</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Dropdown
                     </a>
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">Benutzer</a>
-                        <a class="dropdown-item" href="#">Login</a>
+                        <a class="dropdown-item" href="#!/users">Benutzer</a>
+                        <a class="dropdown-item" href="#!/login">Login</a>
                         <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">Flag</a>
                     </div>
@@ -55,21 +58,22 @@
     </div>
 </section>
 
+<script src="js/fontawesome-all.min.js"></script>
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/angular.min.js"></script>
+<script src="js/angular-route.min.js"></script>
 
-<script src="../js/jquery-3.3.1.slim.min.js"></script>
-<script src="../js/popper.min.js"></script>
-<script src="../js/bootstrap.min.js"></script>
-<script src="../js/angular.min.js"></script>
-<script src="../js/angular-route.min.js"></script>
+<script src="app/app.js"></script>
+<script src="app/config.js"></script>
+<script src="app/controllers/DashboardController.js"></script>
+<script src="app/controllers/LoginController.js"></script>
+<script src="app/controllers/UserController.js"></script>
 
-<script src="app.js"></script>
-<script src="config.js"></script>
-<script src="controllers/DashboardController.js"></script>
-<script src="controllers/LoginController.js"></script>
-
-<script src="services/UserService.js"></script>
-<script src="services/LoginService.js"></script>
-<script src="services/LegacyService.js"></script>
+<script src="app/services/UserService.js"></script>
+<script src="app/services/LoginService.js"></script>
+<script src="app/services/LegacyService.js"></script>
 
 </body>
 </html>

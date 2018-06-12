@@ -5,18 +5,19 @@ app.constant('configuration', {
         baseUrl: 'http://localhost',
         port: '9001',
         root: '/api/',
-        fullUrl: this.baseUrl + ':' + this.port + this.root
+        fullUrl: 'http://localhost:9001/'
     }
 });
 
-app.config(function($routeProvider, configuration) {
-    $routeProvider.when('/', {
-        templateUrl: 'index.html'
+app.config(function($routeProvider) {
+    var urlPrefix = '/ctf_mock_be';
+
+    $routeProvider.when(urlPrefix + '/', {
+        templateUrl: '../index.html'
+    }).when('/login', {
+        templateUrl: 'app/views/login.html'
+    }).when('/users', {
+        templateUrl: 'app/views/users.html'
     })
-    //     .when('/login', {
-    //     templateUrl: 'views/login.html'
-    // }).when('/users', {
-    //     templateUrl: 'views/users.html'
-    // })
     ;
 });
