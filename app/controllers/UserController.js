@@ -1,6 +1,6 @@
 'use strict';
 
-app.controller('UserCtrl', function($scope, UserService, LegacyService) {
+app.controller('UserCtrl', function($scope, UserService, notify) {
 
     $scope.users = {};
     $scope.init = init;
@@ -8,22 +8,16 @@ app.controller('UserCtrl', function($scope, UserService, LegacyService) {
     $scope.init();
 
     function init() {
-        var authToken = '3asd6-bsdf52-m3p9-as7ke5';
-        LegacyService.getFlag(authToken).then(
-            function(result) {
-                console.log(result);
-            }, function(error) {
-
+        UserService.getAll().then(
+            function success(result) {
+                $scope.users = result.data;
+            }, function error(error) {
+                notify({
+                    message: error.status + ' - ' + error.statusText,
+                    classes: 'alert-danger'
+                });
             }
         );
-
-        // UserService.getAll().then(
-        //     function(result) {
-        //         console.log(result);
-        //     }, function(error) {
-        //
-        //     }
-        // );
     }
 
 });

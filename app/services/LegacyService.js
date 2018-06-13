@@ -10,6 +10,7 @@ app.factory('LegacyService', function($http, configuration) {
             return $http({
                 method: 'GET',
                 url: configuration.api.fullUrl + 'flag/',
+                // url: configuration.api.fullUrl + 'flag/',
                 headers: config
             });
         }

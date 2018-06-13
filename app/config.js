@@ -5,7 +5,7 @@ app.constant('configuration', {
         baseUrl: 'http://localhost',
         port: '9001',
         root: '/api/',
-        fullUrl: 'http://localhost:9001/'
+        fullUrl: 'http://localhost/ctf_be/'
     }
 });
 
@@ -21,3 +21,4 @@ app.config(function($routeProvider) {
     })
     ;
 });
+
