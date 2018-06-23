@@ -5,7 +5,7 @@ app.constant('configuration', {
         baseUrl: 'http://localhost',
         port: '9001',
         root: '/api/',
-        fullUrl: 'http://localhost/ctf_be/'
+        fullUrl: 'http://172.17.0.2/ctf_be/'
     }
 });
 
